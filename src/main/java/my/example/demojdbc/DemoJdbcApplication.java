@@ -34,8 +34,9 @@ public class DemoJdbcApplication implements CommandLineRunner {
         System.out.println("\nThe list of books:");
         bookService.findBooksByAuthor(author).forEach(System.out::println);
 
-        bookService.deleteBook(book.getId());
-        System.out.println("\nBook is deleted");
+        var id = book.getId();
+        bookService.deleteBook(id);
+        System.out.println("\nBook with id=" + id + " is deleted");
         System.out.println("========================");
     }
 }

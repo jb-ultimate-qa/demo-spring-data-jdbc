@@ -17,7 +17,6 @@ public class BookService {
 
     @Transactional
     public Book createBook(String title, String author) {
-        long generatedLong = (long) new Random().nextInt();
         Book book = new Book(null, title, author);
         return bookRepository.save(book);
     }
