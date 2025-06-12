@@ -28,7 +28,6 @@ public class Item2 {
 
     @Override
     public String toString() {
-//        return "Item2{" + "id=" + id + ", name1='" + name2 + "'}";
         return "I2{" + name2 + "(id=" + id + ")}";
     }
 }
