@@ -15,11 +15,19 @@ public class User {
     @Column("username")
     private String username;
 
+// ----- use annotation shortcuts -----
 //    @Embedded.Nullable
 //    private Address address1;
 //
 //    @Embedded.Empty
 //    private Passport passport1;
+
+// ----- use prefixes -----
+//    @Embedded.Nullable(prefix = "first_address_")
+//    private Address address1;
+//
+//    @Embedded(onEmpty = USE_NULL, prefix = "second_address_")
+//    private Address address2;
 
     @Embedded(onEmpty = USE_NULL)
     private Address address;
