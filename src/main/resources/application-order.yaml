@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: demo-awards-spring-test
+  flyway:
+    enabled: false
+  liquibase:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/awards-spr
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
