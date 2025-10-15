@@ -24,7 +24,8 @@ public class Order {
 
     private AggregateReference<Shop, Integer> shop; // link to Shop by AggregateReference
 
-    @MappedCollection(idColumn = "order_id")
+//    @MappedCollection(idColumn = "order_id") // Missing 'keyColumn' attribute inspection
+    @MappedCollection(idColumn = "order_id", keyColumn = "orders_key")
     private List<OrderItem> items;                  // list of OrderItems
 
     public void addItem(Product product, int quantity) {
