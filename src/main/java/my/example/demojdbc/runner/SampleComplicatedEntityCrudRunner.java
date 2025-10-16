@@ -32,20 +32,22 @@ public class SampleComplicatedEntityCrudRunner implements CommandLineRunner {
                 () -> System.out.println("Entity is not found")
         );
 
-        System.out.println("\n=== Updating entity ===");
+        System.out.println("\n=== Updating 1 entity ===");
         service.updateEntityName(id, "new name");
         service.findById(id).ifPresent(b -> System.out.println("Updated entity: " + b));
         printAllEntities();
 
+        System.out.println("\n=== Deleting 1 entity ===");
         service.deleteById(id);
         printAllEntities();
 
+        System.out.println("\n=== Deleting all entities ===");
         service.deleteAll();
     }
 
     private void printAllEntities() {
         Iterable<ComplicatedEntity> all = service.findAll();
-        System.out.println("\n=== The list of ComplicatedEntities: ===");
+        System.out.println("~~~ The list of ComplicatedEntities: ~~~");
         all.forEach(System.out::println);
     }
 }

@@ -1,7 +1,6 @@
 package my.example.demojdbc.composite_id.entity;
 
 import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Embedded;
 
 import java.util.Objects;
 
