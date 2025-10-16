@@ -1,6 +1,6 @@
 package my.example.demojdbc.runner;
 
-import my.example.demojdbc.composite_id.CompositeIdService;
+import my.example.demojdbc.composite_id.entity.ComplicatedEntityService;
 import my.example.demojdbc.composite_id.entity.ComplicatedEntity;
 import my.example.demojdbc.composite_id.entity.CompositeId;
 import org.springframework.boot.CommandLineRunner;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile("composite")
 public class SampleComplicatedEntityCrudRunner implements CommandLineRunner {
-    private final CompositeIdService service;
+    private final ComplicatedEntityService service;
 
-    public SampleComplicatedEntityCrudRunner(CompositeIdService service) {
+    public SampleComplicatedEntityCrudRunner(ComplicatedEntityService service) {
         this.service = service;
     }
 

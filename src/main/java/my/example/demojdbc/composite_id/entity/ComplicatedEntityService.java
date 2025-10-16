@@ -1,7 +1,5 @@
-package my.example.demojdbc.composite_id;
+package my.example.demojdbc.composite_id.entity;
 
-import my.example.demojdbc.composite_id.entity.ComplicatedEntity;
-import my.example.demojdbc.composite_id.entity.CompositeId;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,12 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Service
-public class CompositeIdService {
+public class ComplicatedEntityService {
 
     private final ComplicatedEntityRepository complicatedEntityRepository;
     private final JdbcTemplate jdbcTemplate;
 
-    CompositeIdService(ComplicatedEntityRepository complicatedEntityRepository, JdbcTemplate jdbcTemplate) {
+    ComplicatedEntityService(ComplicatedEntityRepository complicatedEntityRepository, JdbcTemplate jdbcTemplate) {
         this.complicatedEntityRepository = complicatedEntityRepository;
         this.jdbcTemplate = jdbcTemplate;
     }
