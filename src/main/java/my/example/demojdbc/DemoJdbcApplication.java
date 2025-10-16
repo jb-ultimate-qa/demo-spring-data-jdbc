@@ -8,7 +8,7 @@ public class DemoJdbcApplication {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DemoJdbcApplication.class);
-        app.setAdditionalProfiles("book");      // change profile to switch between runners
+        app.setAdditionalProfiles("composite");      // change profile to switch between runners
         app.run(args);
     }
 
