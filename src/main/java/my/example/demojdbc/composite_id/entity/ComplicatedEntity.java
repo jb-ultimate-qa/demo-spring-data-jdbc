@@ -9,6 +9,11 @@ import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Embedded;
 import org.springframework.data.relational.core.mapping.Table;
 
+//import my.example.demojdbc.composite_id.ItemA;
+//import my.example.demojdbc.composite_id.ItemB;
+//import org.springframework.data.jdbc.core.mapping.AggregateReference;
+//import org.springframework.data.relational.core.mapping.MappedCollection;
+//import java.util.Set;
 import java.util.Objects;
 
 @Getter
@@ -17,6 +22,10 @@ import java.util.Objects;
 public class ComplicatedEntity implements Persistable<CompositeId> {
     @Id @Embedded.Nullable CompositeId id;
     String name;
+
+//    AggregateReference<ItemA, Integer> itemA;
+//    @MappedCollection(idColumn = "custom_column")
+//    Set<ItemB> items;
 
     @Transient
     private boolean isNew = true;
@@ -41,9 +50,6 @@ public class ComplicatedEntity implements Persistable<CompositeId> {
                 ", idNumeric=" + id.idNumeric +
                 ", name='" + name + '\'' +
                 '}';
-    }
-
-    public ComplicatedEntity() {
     }
 
     @PersistenceCreator
