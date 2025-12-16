@@ -1,4 +1,4 @@
-package my.example.demojdbc.collection;
+package my.example.demojdbc.collection_box;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,27 +7,27 @@ import org.springframework.data.relational.core.mapping.Table;
 
 @Getter
 @Setter
-@Table(value = "item3")
-public class Item3 {
+@Table(value = "item2")
+public class Item2 {
     @Id
     private Integer id;
 
-    private String name3;
+    private String name2;
 
-    public Item3() {}
+    public Item2() {}
 
-    public Item3(String name) {
+    public Item2(String name) {
         this.id = null;
-        this.name3 = name;
+        this.name2 = name;
     }
 
-    public Item3(Integer id, String name3) {
+    public Item2(Integer id, String name2) {
         this.id = id;
-        this.name3 = name3;
+        this.name2 = name2;
     }
 
     @Override
     public String toString() {
-        return "I3{" + name3 + "(id=" + id + ")}";
+        return "I2{" + name2 + "(id=" + id + ")}";
     }
 }

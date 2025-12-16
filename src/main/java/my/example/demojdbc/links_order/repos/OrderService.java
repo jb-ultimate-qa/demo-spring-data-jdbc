@@ -1,7 +1,7 @@
-package my.example.demojdbc.links.repos;
+package my.example.demojdbc.links_order.repos;
 
 
-import my.example.demojdbc.links.*;
+import my.example.demojdbc.links_order.*;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
