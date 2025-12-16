@@ -1,4 +1,4 @@
-package my.example.demojdbc.emb;
+package my.example.demojdbc.emb_user;
 
 import org.springframework.data.relational.core.mapping.Column;
 

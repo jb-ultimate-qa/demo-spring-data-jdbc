@@ -1,4 +1,4 @@
-package my.example.demojdbc.collection;
+package my.example.demojdbc.collection_box;
 
 import org.springframework.data.repository.CrudRepository;
 

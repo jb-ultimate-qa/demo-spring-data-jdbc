@@ -1,4 +1,4 @@
-package my.example.demojdbc.links;
+package my.example.demojdbc.links_order;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
