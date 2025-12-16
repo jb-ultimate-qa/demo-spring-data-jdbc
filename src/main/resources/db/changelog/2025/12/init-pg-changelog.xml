@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.31.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1765902055616-1" author="Irina.Lovtsova">
+        <createTable tableName="book">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_book"/>
+            </column>
+            <column name="title" type="VARCHAR"/>
+            <column name="author" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-2" author="Irina.Lovtsova">
+        <createTable tableName="box">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_box"/>
+            </column>
+            <column name="volume" type="DOUBLE"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-3" author="Irina.Lovtsova">
+        <createTable tableName="buyers">
+            <column autoIncrement="true" name="buyer_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_buyers"/>
+            </column>
+            <column name="full_name" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-4" author="Irina.Lovtsova">
+        <createTable tableName="customers">
+            <column autoIncrement="true" name="customer_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_customers"/>
+            </column>
+            <column name="full_name" type="VARCHAR"/>
+            <column name="email" type="VARCHAR"/>
+            <column name="city" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-5" author="Irina.Lovtsova">
+        <createTable tableName="item1">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_item1"/>
+            </column>
+            <column name="name1" type="VARCHAR"/>
+            <column name="box1_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="list_key" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-6" author="Irina.Lovtsova">
+        <createTable tableName="item2">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_item2"/>
+            </column>
+            <column name="name2" type="VARCHAR"/>
+            <column name="box2_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-7" author="Irina.Lovtsova">
+        <createTable tableName="item3">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_item3"/>
+            </column>
+            <column name="name3" type="VARCHAR"/>
+            <column name="box3_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="map_key" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-8" author="Irina.Lovtsova">
+        <createTable tableName="order_items">
+            <column name="product_id" type="BIGINT"/>
+            <column name="quantity" type="INT"/>
+            <column name="order_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="orders_key" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-9" author="Irina.Lovtsova">
+        <createTable tableName="orders">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_orders"/>
+            </column>
+            <column name="buyer_id" type="BIGINT"/>
+            <column name="shop" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-10" author="Irina.Lovtsova">
+        <createTable tableName="products">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_products"/>
+            </column>
+            <column name="name" type="VARCHAR"/>
+            <column name="price" type="DECIMAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-11" author="Irina.Lovtsova">
+        <createTable tableName="shops">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_shops"/>
+            </column>
+            <column name="shop_name" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-12" author="Irina.Lovtsova">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users"/>
+            </column>
+            <column name="username" type="VARCHAR"/>
+            <column name="city" type="VARCHAR"/>
+            <column name="street" type="VARCHAR"/>
+            <column name="passport_number" type="VARCHAR"/>
+            <column name="passport_is_valid" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1765902055616-13" author="Irina.Lovtsova">
+        <addForeignKeyConstraint baseColumnNames="box1_id" baseTableName="item1" constraintName="fk_item1_on_box1"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="box"/>
+    </changeSet>
+    <changeSet id="1765902055616-14" author="Irina.Lovtsova">
+        <addForeignKeyConstraint baseColumnNames="box2_id" baseTableName="item2" constraintName="fk_item2_on_box2"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="box"/>
+    </changeSet>
+    <changeSet id="1765902055616-15" author="Irina.Lovtsova">
+        <addForeignKeyConstraint baseColumnNames="box3_id" baseTableName="item3" constraintName="fk_item3_on_box3"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="box"/>
+    </changeSet>
+    <changeSet id="1765902055616-16" author="Irina.Lovtsova">
+        <addForeignKeyConstraint baseColumnNames="order_id" baseTableName="order_items"
+                                 constraintName="fk_order_items_on_order" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="orders"/>
+    </changeSet>
+    <changeSet id="1765902055616-17" author="Irina.Lovtsova">
+        <addForeignKeyConstraint baseColumnNames="shop" baseTableName="orders" constraintName="fk_orders_on_shop"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="shops"/>
+    </changeSet>
+
+</databaseChangeLog>
