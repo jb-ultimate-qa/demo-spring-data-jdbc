@@ -1,1 +1,1 @@
-## Simple demo project with Spring Data JDBC
+this branch is not actual anymore, please use master
