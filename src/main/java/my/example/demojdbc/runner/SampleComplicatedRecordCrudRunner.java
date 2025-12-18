@@ -1,8 +1,8 @@
 package my.example.demojdbc.runner;
 
-import my.example.demojdbc.composite_id.record.ComplicatedRecord;
-import my.example.demojdbc.composite_id.record.ComplicatedRecordService;
-import my.example.demojdbc.composite_id.record.CompositeRecordId;
+import my.example.demojdbc.roots.composite_id.record.ComplicatedRecord;
+import my.example.demojdbc.roots.composite_id.record.ComplicatedRecordService;
+import my.example.demojdbc.roots.composite_id.record.CompositeRecordId;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

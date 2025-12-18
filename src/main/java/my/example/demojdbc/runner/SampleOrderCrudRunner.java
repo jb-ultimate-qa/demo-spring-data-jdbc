@@ -1,7 +1,7 @@
 package my.example.demojdbc.runner;
 
-import my.example.demojdbc.links_order.*;
-import my.example.demojdbc.links_order.repos.OrderService;
+import my.example.demojdbc.roots.links_order.Order;
+import my.example.demojdbc.roots.links_order.repos.OrderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

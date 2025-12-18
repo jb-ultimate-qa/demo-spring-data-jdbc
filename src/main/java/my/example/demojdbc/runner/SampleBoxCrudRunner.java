@@ -1,7 +1,7 @@
 package my.example.demojdbc.runner;
 
-import my.example.demojdbc.collection_box.Box;
-import my.example.demojdbc.collection_box.BoxService;
+import my.example.demojdbc.roots.collection_box.Box;
+import my.example.demojdbc.roots.collection_box.BoxService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
