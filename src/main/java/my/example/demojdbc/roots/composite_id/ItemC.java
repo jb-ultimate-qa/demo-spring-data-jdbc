@@ -14,7 +14,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table(value = "item_c")
 public class ItemC {
     @Id private Integer id;
-    private String name3;
+    private String nameC;
 
 //    AggregateReference<ComplicatedEntity, Integer> coentity;
 //    @MappedCollection(idColumn = "custom_column")
@@ -24,16 +24,16 @@ public class ItemC {
 
     public ItemC(String name) {
         this.id = null;
-        this.name3 = name;
+        this.nameC = name;
     }
 
-    public ItemC(Integer id, String name3) {
+    public ItemC(Integer id, String nameC) {
         this.id = id;
-        this.name3 = name3;
+        this.nameC = nameC;
     }
 
     @Override
     public String toString() {
-        return "I3{" + name3 + "(id=" + id + ")}";
+        return "I3{" + nameC + "(id=" + id + ")}";
     }
 }

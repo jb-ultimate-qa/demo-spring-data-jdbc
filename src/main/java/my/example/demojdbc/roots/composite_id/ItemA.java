@@ -10,22 +10,22 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table(value = "item_a")
 public class ItemA {
     @Id private Integer id;
-    private String name1;
+    private String nameA;
 
     public ItemA() {}
 
     public ItemA(String name) {
         this.id = null;
-        this.name1 = name;
+        this.nameA = name;
     }
 
-    public ItemA(Integer id, String name1) {
+    public ItemA(Integer id, String nameA) {
         this.id = id;
-        this.name1 = name1;
+        this.nameA = nameA;
     }
 
     @Override
     public String toString() {
-        return "I1{" + name1 + "(id=" + id + ")}";
+        return "I1{" + nameA + "(id=" + id + ")}";
     }
 }
