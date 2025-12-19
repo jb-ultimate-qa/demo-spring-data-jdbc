@@ -12,7 +12,5 @@ public record CompositeRecordId(
         Long idNum,
         String idExt
 //        AggregateReference<ItemA, Integer> itemA
-//        @MappedCollection(idColumn = "custom_column")
-//        Set<ItemA> items
 ) {
 }

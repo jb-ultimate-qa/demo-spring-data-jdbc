@@ -1,10 +1,8 @@
 package my.example.demojdbc.roots.composite_id.entity;
 
 //import my.example.demojdbc.composite_id.ItemA;
-//import my.example.demojdbc.composite_id.ItemB;
 //import org.springframework.data.jdbc.core.mapping.AggregateReference;
 //import org.springframework.data.relational.core.mapping.Column;
-//import org.springframework.data.relational.core.mapping.MappedCollection;
 //import java.util.Set;
 import java.util.Objects;
 
@@ -13,7 +11,6 @@ public class CompositeId {
     Long idNumeric;
     String idExtended;
 //    AggregateReference<ItemA, Integer> itemA;
-//    @MappedCollection(idColumn = "custom_column") Set<ItemB> items;
 
     public CompositeId(Long idNumeric, String idExtended) {
         this.idNumeric = idNumeric;
