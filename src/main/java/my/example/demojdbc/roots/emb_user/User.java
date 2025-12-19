@@ -28,6 +28,12 @@ public class User {
 //
 //    @Embedded(onEmpty = USE_NULL, prefix = "second_address_")
 //    private Address address2;
+//
+//    @Embedded(onEmpty = USE_EMPTY, prefix = "first_")
+//    private Passport passport1;
+//
+//    @Embedded.Empty(prefix = "second_")
+//    private Passport passport2;
 
     @Embedded(onEmpty = USE_NULL)
     private Address address;
