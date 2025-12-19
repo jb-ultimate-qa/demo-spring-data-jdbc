@@ -7,9 +7,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @NoArgsConstructor
-@Table("shops")
 @Getter
 @Setter
+@Table("shops")
 public class Shop {
     @Id
     private int id;

@@ -1,4 +1,4 @@
-package my.example.demojdbc.roots.book;
+package my.example.demojdbc.roots.book_by_repo;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

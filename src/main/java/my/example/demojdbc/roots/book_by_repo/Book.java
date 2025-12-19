@@ -1,4 +1,4 @@
-package my.example.demojdbc.roots.book;
+package my.example.demojdbc.roots.book_by_repo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

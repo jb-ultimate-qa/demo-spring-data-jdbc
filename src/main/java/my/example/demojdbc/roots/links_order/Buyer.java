@@ -7,9 +7,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @NoArgsConstructor
-@Table("buyers")
 @Getter
 @Setter
+@Table("buyers")
 public class Buyer {
     @Id
     private Long buyerId;

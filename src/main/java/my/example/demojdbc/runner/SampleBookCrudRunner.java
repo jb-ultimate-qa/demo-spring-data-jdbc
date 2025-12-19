@@ -1,7 +1,7 @@
 package my.example.demojdbc.runner;
 
-import my.example.demojdbc.roots.book.Book;
-import my.example.demojdbc.roots.book.BookService;
+import my.example.demojdbc.roots.book_by_repo.Book;
+import my.example.demojdbc.roots.book_by_repo.BookService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
