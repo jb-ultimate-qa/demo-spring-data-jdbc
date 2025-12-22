@@ -24,29 +24,23 @@ public class SampleBoxCrudRunner implements CommandLineRunner {
         var id = box.getId();
 
         System.out.println("\n=== Reading the saved Box ===");
-        boxService.getBox(id)
-                .ifPresentOrElse(
-                b -> System.out.println("Fetched box: " + b),
-                () -> System.out.println("Box not found")
-        );
-
+        printResultBox(id);
 
         System.out.println("\n=== Updating Box volume ===");
         boxService.updateBoxVolume(id, 99.9);
-        boxService.getBox(id).ifPresent(b -> System.out.println("Updated box: " + b));
+        printResultBox(id);
 
         System.out.println("\n=== Editing items in the Box ===");
         boxService.replaceAllItems(id);
-        boxService.getBox(id).ifPresent(b -> System.out.println("Box after item edits: " + b));
+        printResultBox(id);
 
         System.out.println("\n=== Modifying one item in each collection ===");
         boxService.replaceFirstItems(id);
-        boxService.getBox(id).ifPresent(b -> System.out.println("Box after single-item edits: " + b));
+        printResultBox(id);
 
         System.out.println("\n=== Updating fields inside items ===");
         boxService.updateItemFields(id, "addedKey");
-        boxService.getBox(box.getId()).ifPresent(b -> System.out.println("Box after field updates: " + b));
-
+        printResultBox(id);
 
         System.out.println("\n=== Deleting Box ===");
         boxService.deleteBox(id);
@@ -57,5 +51,13 @@ public class SampleBoxCrudRunner implements CommandLineRunner {
                 b -> System.out.println("Unexpectedly found box: " + b),
                 () -> System.out.println("Box was successfully deleted")
         );
+    }
+
+    private void printResultBox(Integer id) {
+        boxService.getBox(id)
+                .ifPresentOrElse(
+                        b -> System.out.println("Result box: " + b),
+                        () -> System.out.println("Box not found")
+                );
     }
 }
