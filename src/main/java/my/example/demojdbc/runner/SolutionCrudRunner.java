@@ -27,5 +27,8 @@ public class SolutionCrudRunner implements CommandLineRunner {
 
         out.println("=== Creating sample Solution with using alias for sequence name ===");
         service.insertSampleDataForSolutionAlias();
+
+        out.println("=== Deleting all ===");
+        service.deleteAll();
     }
 }

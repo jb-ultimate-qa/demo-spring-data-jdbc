@@ -44,4 +44,11 @@ public class SolutionService {
         List<SolutionAlias> all = template.findAll(SolutionAlias.class);
         all.forEach(System.out::println);
     }
+
+    @Transactional
+    public void deleteAll() {
+        template.deleteAll(SolutionDefault.class);
+        template.deleteAll(SolutionNamed.class);
+        template.deleteAll(SolutionAlias.class);
+    }
 }
