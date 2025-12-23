@@ -21,9 +21,6 @@ public class Shop {
 
     @Override
     public String toString() {
-        return "Shop {" +
-                "id=" + id +
-                ", shopName='" + shopName + '\'' +
-                '}';
+        return "Shop {" + "id=" + id + ", name='" + shopName + "'}";
     }
 }

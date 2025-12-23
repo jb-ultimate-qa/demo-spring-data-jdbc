@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @Profile("order")
-class SampleOrderCrudRunner implements CommandLineRunner {
+class OrderCrudRunner implements CommandLineRunner {
 
     private final OrderService orderService;
 
-    public SampleOrderCrudRunner(OrderService orderService) {
+    public OrderCrudRunner(OrderService orderService) {
         this.orderService = orderService;
     }
 

@@ -21,9 +21,6 @@ public class Buyer {
 
     @Override
     public String toString() {
-        return "Buyer {" +
-                "buyerId=" + buyerId +
-                ", fullName='" + fullName + '\'' +
-                '}';
+        return "Buyer {id=" + buyerId + ", fullName='" + fullName + "'}";
     }
 }

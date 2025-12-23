@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @Profile("box")
-public class SampleBoxCrudRunner implements CommandLineRunner {
+public class BoxCrudRunner implements CommandLineRunner {
 
     private final BoxService boxService;
 
-    public SampleBoxCrudRunner(BoxService boxService) {
+    public BoxCrudRunner(BoxService boxService) {
         this.boxService = boxService;
     }
 
