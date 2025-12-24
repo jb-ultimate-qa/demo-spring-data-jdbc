@@ -1,5 +1,6 @@
 package my.example.demojdbc.runner;
 
+import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.composite_id.entity.ComplicatedEntityService;
 import my.example.demojdbc.roots.composite_id.entity.ComplicatedEntity;
 import my.example.demojdbc.roots.composite_id.entity.CompositeId;
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("composite")
+@Profile(AppProfile.COMPOSITE_ID_ENTITY)
 public class ComplicatedEntityCrudRunner implements CommandLineRunner {
     private final ComplicatedEntityService service;
 

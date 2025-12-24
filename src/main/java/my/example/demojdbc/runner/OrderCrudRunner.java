@@ -1,14 +1,14 @@
 package my.example.demojdbc.runner;
 
+import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.links_order.Order;
 import my.example.demojdbc.roots.links_order.repos.OrderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-
 @Configuration
-@Profile("order")
+@Profile(AppProfile.ORDER)
 class OrderCrudRunner implements CommandLineRunner {
 
     private final OrderService orderService;

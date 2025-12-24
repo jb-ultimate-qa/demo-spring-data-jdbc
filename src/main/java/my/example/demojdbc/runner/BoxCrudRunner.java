@@ -1,5 +1,6 @@
 package my.example.demojdbc.runner;
 
+import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.collection_box.Box;
 import my.example.demojdbc.roots.collection_box.BoxService;
 import org.springframework.boot.CommandLineRunner;
@@ -7,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("box")
+@Profile(AppProfile.BOX)
 public class BoxCrudRunner implements CommandLineRunner {
 
     private final BoxService boxService;

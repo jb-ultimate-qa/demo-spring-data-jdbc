@@ -1,5 +1,6 @@
 package my.example.demojdbc.runner;
 
+import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.book_by_repo.Book;
 import my.example.demojdbc.roots.book_by_repo.BookService;
 import org.springframework.boot.CommandLineRunner;
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.Profile;
 class BookCrudRunner {
 
     @Bean
-    @Profile("book")
+    @Profile(AppProfile.BOOK)
     public CommandLineRunner loadData(
             BookService bookService) {
         return args -> {

@@ -1,5 +1,6 @@
 package my.example.demojdbc.runner;
 
+import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.sequences.SolutionService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 import static java.lang.System.out;
 
 @Configuration
-@Profile("solution")
+@Profile(AppProfile.SOLUTION)
 public class SolutionCrudRunner implements CommandLineRunner {
 
     private final SolutionService service;
