@@ -1,7 +1,7 @@
 ## Simple demo project with Spring Data JDBC
 
 - A set of entities with different combinations (see `roots` package)
-- Spring Data 4.0 features
+- Spring Data 4.0 features (composite id, sequences)
 - CRUD repositories and command line runners separated by profiles (see `runner` package)
 - Flyway and Liquibase scripts + sql scripts for PostgreSQL with data (`resources/db`)
 - build.gradle
