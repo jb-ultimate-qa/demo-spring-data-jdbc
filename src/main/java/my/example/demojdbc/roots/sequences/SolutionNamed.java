@@ -11,8 +11,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("solution_named")
 public class SolutionNamed {
     @Id
-    @Sequence(value = "solution_named_seq")
-//    @Sequence(value = "solution_named_seq", schema = "public")
+    @Sequence(value = "solution_named_seq", schema = "public")
     private Long id;
 
     private String description;
