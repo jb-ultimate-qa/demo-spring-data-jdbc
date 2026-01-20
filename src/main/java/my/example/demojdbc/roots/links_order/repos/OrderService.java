@@ -71,7 +71,19 @@ public class OrderService {
         return shopRepo.findById(shopId);
     }
 
-    public Optional<Product> readSomeProductByOrderId(Long orderId) {
+    public Optional<Order> readFirstOrderByShopId(Integer shopId) {
+        List<Order> order = orderRepository.findOrderByShop(shopId);
+        if (order.isEmpty()) { return Optional.empty(); }
+        return Optional.ofNullable(order.get(0));
+    }
+
+    public Optional<Order> readFirstOrderByShopReference(AggregateReference<Shop, Integer> shop) {
+        List<Order> order = orderRepository.findOrderByShop(shop);
+        if (order.isEmpty()) { return Optional.empty(); }
+        return Optional.ofNullable(order.get(0));
+    }
+
+    public Optional<Product> readFirstProductByOrderId(Long orderId) {
         Optional<Order> order = orderRepository.findById(orderId);
         if (order.isEmpty()) { return Optional.empty(); }
 
