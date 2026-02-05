@@ -27,22 +27,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-//  Liquibase
-    implementation 'org.springframework.boot:spring-boot-starter-liquibase'
-    implementation 'org.liquibase:liquibase-core'
-
 //  Flyway
     implementation 'org.springframework.boot:spring-boot-starter-flyway'
     implementation 'org.flywaydb:flyway-core:11.7.2'
     implementation 'org.flywaydb:flyway-database-postgresql:11.7.2'
-//    implementation 'org.flywaydb:flyway-database-oracle'
-//    implementation 'org.flywaydb:flyway-mysql'
+    implementation 'org.flywaydb:flyway-mysql'
 
 //  DBs
     runtimeOnly 'org.postgresql:postgresql'
-//    runtimeOnly 'com.h2database:h2'
-//    runtimeOnly 'com.mysql:mysql-connector-j'
-//    runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+    runtimeOnly 'com.mysql:mysql-connector-j'
 
 //  Lombok
     compileOnly 'org.projectlombok:lombok'
