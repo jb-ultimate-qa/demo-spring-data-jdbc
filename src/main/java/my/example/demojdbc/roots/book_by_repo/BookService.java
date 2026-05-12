@@ -16,7 +16,13 @@ public class BookService {
 
     @Transactional
     public Book createBook(String title, String author) {
-        Book book = new Book(null, title, author);
+        Book book = new Book(null, title, author, null);
+        return bookRepository.save(book);
+    }
+
+    @Transactional
+    public Book createBook(String title, String author, GenreEnum genreEnum) {
+        Book book = new Book(null, title, author, genreEnum);
         return bookRepository.save(book);
     }
 

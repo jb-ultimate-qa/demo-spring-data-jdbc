@@ -14,9 +14,10 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+    private GenreEnum genre;
 
     @Override
     public String toString() {
-        return "Book{ title: " + title + ", author: " + author + "}";
+        return "Book{ title: " + title + ", author: " + author + ", genre: " + genre + "}";
     }
 }

@@ -3,6 +3,7 @@ package my.example.demojdbc.runner;
 import my.example.demojdbc.AppProfile;
 import my.example.demojdbc.roots.book_by_repo.Book;
 import my.example.demojdbc.roots.book_by_repo.BookService;
+import my.example.demojdbc.roots.book_by_repo.GenreEnum;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +18,7 @@ class BookCrudRunner {
             BookService bookService) {
         return args -> {
             String author = "Marcus Aurelius";
-            Book book = bookService.createBook("Meditations", author);
+            Book book = bookService.createBook("Meditations", author, GenreEnum.CLASSICS);
 
             System.out.println("========================");
             System.out.println("Book is created: " + book);
