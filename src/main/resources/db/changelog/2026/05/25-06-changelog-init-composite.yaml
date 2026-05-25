@@ -1,0 +1,105 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1779719203054-1
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_complicated_entity
+                  name: id_numeric
+                  type: BIGINT
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_complicated_entity
+                  name: id_extended
+                  type: VARCHAR
+              - column:
+                  name: name
+                  type: VARCHAR
+            tableName: complicated_entity
+  - changeSet:
+      id: 1779719203054-2
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_complicated_record
+                  name: id_num
+                  type: BIGINT
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_complicated_record
+                  name: id_ext
+                  type: VARCHAR
+              - column:
+                  name: description
+                  type: VARCHAR
+            tableName: complicated_record
+  - changeSet:
+      id: 1779719203054-3
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item_a
+                  name: id
+                  type: INT
+              - column:
+                  name: namea
+                  type: VARCHAR
+            tableName: item_a
+  - changeSet:
+      id: 1779719203054-4
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item_b
+                  name: id
+                  type: INT
+              - column:
+                  name: nameb
+                  type: VARCHAR
+            tableName: item_b
+  - changeSet:
+      id: 1779719203054-5
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item_c
+                  name: id
+                  type: INT
+              - column:
+                  name: namec
+                  type: VARCHAR
+            tableName: item_c
+

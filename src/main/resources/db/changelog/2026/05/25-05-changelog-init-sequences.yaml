@@ -1,0 +1,84 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1779719167233-1
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createSequence:
+            incrementBy: 1
+            sequenceName: solution_alias_seq
+            startValue: 1
+  - changeSet:
+      id: 1779719167233-2
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createSequence:
+            incrementBy: 1
+            sequenceName: solution_default_seq
+            startValue: 1
+  - changeSet:
+      id: 1779719167233-3
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_solution_alias
+                  name: id
+                  type: INT
+              - column:
+                  name: description
+                  type: VARCHAR
+            tableName: solution_alias
+  - changeSet:
+      id: 1779719167233-4
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_solution_default
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: description
+                  type: VARCHAR
+            tableName: solution_default
+  - changeSet:
+      id: 1779719167233-5
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_solution_named
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: description
+                  type: VARCHAR
+            tableName: solution_named
+  - changeSet:
+      id: 1779719167241-1
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createSequence:
+            incrementBy: 1
+            schemaName: public
+            sequenceName: solution_named_seq
+            startValue: 1
+

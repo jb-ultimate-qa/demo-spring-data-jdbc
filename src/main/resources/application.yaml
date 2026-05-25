@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: demoSpringJdbcYaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo-jdbc-yaml
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:/db/changelog/main-changelog.yaml

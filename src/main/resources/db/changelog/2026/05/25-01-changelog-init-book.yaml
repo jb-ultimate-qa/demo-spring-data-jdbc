@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1779718401865-1
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_book
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: title
+                  type: VARCHAR
+              - column:
+                  name: author
+                  type: VARCHAR
+              - column:
+                  name: genre
+                  type: VARCHAR
+            tableName: book
+

@@ -1,0 +1,135 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1779718715639-1
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_box
+                  name: id
+                  type: INT
+              - column:
+                  name: volume
+                  type: DOUBLE
+            tableName: box
+  - changeSet:
+      id: 1779718715639-2
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item1
+                  name: id
+                  type: INT
+              - column:
+                  name: name1
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: box1_id
+                  type: INT
+              - column:
+                  name: list_key
+                  type: VARCHAR
+            tableName: item1
+  - changeSet:
+      id: 1779718715639-3
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item2
+                  name: id
+                  type: INT
+              - column:
+                  name: name2
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: box2_id
+                  type: INT
+            tableName: item2
+  - changeSet:
+      id: 1779718715639-4
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item3
+                  name: id
+                  type: INT
+              - column:
+                  name: name3
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: box3_id
+                  type: INT
+              - column:
+                  name: map_key
+                  type: VARCHAR
+            tableName: item3
+  - changeSet:
+      id: 1779718715639-5
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: box1_id
+            baseTableName: item1
+            constraintName: fk_item1_on_box1
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: box
+  - changeSet:
+      id: 1779718715639-6
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: box2_id
+            baseTableName: item2
+            constraintName: fk_item2_on_box2
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: box
+  - changeSet:
+      id: 1779718715639-7
+      author: Irina.Lovtsova
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: box3_id
+            baseTableName: item3
+            constraintName: fk_item3_on_box3
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: box
+
